@@ -1,0 +1,12 @@
+To remove angular submodule from project use below steps
+
+0. mv client client_tmp
+
+1. git submodule deinit -f -- client    
+2. rm -rf .git/modules/client
+3. git rm -f client
+# Note: client (no trailing slash)
+
+# or, if you want to leave it in your working tree and have done step 0
+3.   git rm --cached client
+3b is mv client_tmp client
